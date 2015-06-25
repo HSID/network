@@ -1,5 +1,7 @@
 #! /usr/bin python
 
+import time
+
 from socket import *
 
 serverPort = 12000
@@ -12,10 +14,7 @@ print "The server is ready to receive"
 
 while True:
 	message, clientAddress = serverSocket.recvfrom(2048)
-	print clientAddress
-	print message
-	modifiedMessage = message.upper()
-	print modifiedMessage
-	serverSocket.sendto(modifiedMessage, clientAddress)
+	print 'Received:', message
+	print 'Own:', time.time()
 
 
