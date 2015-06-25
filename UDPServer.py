@@ -15,6 +15,6 @@ print "The server is ready to receive"
 while True:
 	message, clientAddress = serverSocket.recvfrom(2048)
 	print 'Received:', message
-	print 'Own:', time.time()
+	print 'Own: %.5f' % time.time()
 
 

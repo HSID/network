@@ -12,7 +12,7 @@ serverPort = 12000
 
 clientSocket = socket(AF_INET, SOCK_DGRAM)
 	
-message = '%.5s' % time.time()
+message = '%.5f' % time.time()
 
 clientSocket.sendto(message, (serverName, serverPort))
 
